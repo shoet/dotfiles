@@ -1,0 +1,149 @@
+{
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    }
+  ],
+  // sync clickboard
+  "vim.useSystemClipboard": true,
+  "commentTranslate.targetLanguage": "ja",
+  "workbench.editor.enablePreview": false,
+  "debug.toolBarLocation": "docked",
+  "dart.runPubGetOnPubspecChanges": false,
+  "[dart]": {
+    "editor.rulers": [200]
+  },
+  "dart.lineLength": 200,
+  "workbench.colorTheme": "monokai-charcoal (green)",
+  "workbench.startupEditor": "newUntitledFile",
+  // "dart.previewLsp": true,
+  "jupyter.alwaysTrustNotebooks": true,
+  // "workbench.editorAssociations": {
+  //     "*.ipynb": "jupyter.notebook.ipynb",
+  //     "*.csv": "default"
+  // },
+  "todo-tree.tree.showScanModeButton": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "git.ignoreLegacyWarning": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "redhat.telemetry.enabled": true,
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "yaml.validate": false,
+  "tabnine.experimentalAutoImports": true,
+  "docker.images.label": "RepositoryName",
+  "editor.unicodeHighlight.allowedCharacters": {
+    " ": true
+  },
+  "code-runner.runInTerminal": true,
+  "clangd.detectExtensionConflicts": false,
+  "editor.tabSize": 4,
+  // "files.associations": { "*.html": "jinja-html"},
+  "hediet.vscode-drawio.resizeImages": null,
+  "liveServer.settings.donotShowInfoMsg": true,
+  // "emmet.syntaxProfiles": {
+  //     "html": {
+  //         "filters": "html,c"
+  //     }
+  // },
+  "emmet.preferences": {
+    "filter.commentAfter": "<!-- /[#ID][.CLASS] -->"
+  },
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "ruby": "ruby",
+    "go": "go run",
+    "shellscript": "bash",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "swift": "swift",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "dart": "dart"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[jinja-html]": {
+    "editor.formatOnSave": false
+  },
+  "[vue]": {
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "editor.useTabStops": false
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "markdown-pdf.displayHeaderFooter": false,
+  "git.confirmSync": false,
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.formatTool": "gofmt",
+}
