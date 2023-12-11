@@ -1,0 +1,230 @@
+[
+    // Toggle between terminal and editor focus
+    {
+        "key":     "cmd+[",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key":     "cmd+[",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when":    "terminalFocus"
+    },
+    // maximized panel size. when focus terminal.
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "focusedView"
+    },
+    // Toggle between filetree and editor focus
+    {
+        "key": "cmd+1",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when":    "editorFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "filesExplorerFocus"
+    },
+    // completion: ctrl + j
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.triggerSuggest",
+        // "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+        "when": "editorFocus && vim.mode == 'Insert'"
+    },
+    // left tree items. expand when folder item.
+    {
+        "key": "Enter",
+        "command": "list.toggleExpand",
+        "when": "listFocus"
+    },
+    // previous text editor: ctrl + j
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.previousEditor",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    // next text editor: ctrl + k
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.nextEditor",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    // toggle terminal: ctrl + ^
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    // new file in explorer: space + n
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus"
+    },
+    // new file in explorer: space + n
+    {
+        "key": "cmd+shift+n",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus"
+    },
+    // new file in explorer: space + n
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus"
+    },
+    // file rename: F2
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    // cmd+3 ソース管理
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    // cmd+4 実行とデバッグ
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    // cmd+5 拡張機能
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.terminal.searchWorkspace",
+        "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.view.search",
+        "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-rerunSearchEditorSearch",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "revealFileInOS",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "-revealFileInOS",
+        "when": "!editorFocus"
+    },
+    // {
+    //     "key": "ctrl+`",
+    //     "command": "workbench.action.focusActiveEditorGroup",
+    //     "when": "terminalFocus"
+    // },
+    // {
+    //     "key": "ctrl+`",
+    //     "command": "workbench.action.terminal.focus",
+    //     "when": "editorFocus"
+    // }
+    // focus terminal.
+    // {
+    //     "key": "ctrl+t",
+    //     "command": "workbench.action.terminal.focus",
+    // },
+    // {
+    //     "key": "ctrl+shift+[BracketLeft]",
+    //     "command": "-workbench.action.terminal.toggleTerminal",
+    //     "when": "terminal.active"
+    // },
+    // {
+    //     "key": "ctrl+`",
+    //     "command": "-workbench.action.terminal.toggleTerminal",
+    //     "when": "terminal.active"
+    // },
+    // {
+    //     "key": "ctrl+q",
+    //     "command": "-workbench.action.quickOpenView"
+    // },
+    // {
+    //     "key": "ctrl+q",
+    //     "command": "-workbench.action.quickOpenView"
+    // },
+    // {
+    //     "key": "ctrl+`",
+    //     "command": "terminalopen"
+    // }
+    // {
+    //     "key": "shift+cmd+[",
+    //     "command": "-workbench.action.previousEditor"
+    // },
+    // {
+    //     "key": "shift+cmd+]",
+    //     "command": "-workbench.action.nextEditor"
+    // },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+]
